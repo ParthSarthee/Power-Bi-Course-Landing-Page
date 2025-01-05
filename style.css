@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn-primary {
+		@apply px-6 py-2 text-white transition-colors bg-blue-600 rounded-md hover:bg-blue-700;
+	}
+
+	.nav-link {
+		@apply text-gray-700 transition-colors hover:text-blue-600;
+	}
+}
