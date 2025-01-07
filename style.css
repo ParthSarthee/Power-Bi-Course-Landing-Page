@@ -3,11 +3,62 @@
 @tailwind utilities;
 
 @layer components {
-	.btn-primary {
-		@apply px-6 py-2 text-white transition-colors bg-blue-600 rounded-md hover:bg-blue-700;
+	.carousel-container {
+		display: flex;
+		gap: 1rem;
+		position: relative;
+		animation: scroll 30s linear infinite;
 	}
 
-	.nav-link {
-		@apply text-gray-700 transition-colors hover:text-blue-600;
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(
+				calc(-350px * 3)
+			); /* Adjust based on number of cards */
+		}
+	}
+
+	.testimonial-card {
+		flex: 0 0 auto;
+	}
+
+	.carousel-container:hover {
+		animation-play-state: paused;
+	}
+}
+
+@layer components {
+	.company-carousel {
+		display: flex;
+		gap: 1rem;
+		position: relative;
+		animation: scrollCompanies 20s linear infinite;
+	}
+
+	.company-logo-item {
+		flex: 0 0 auto;
+		transition: transform 0.3s ease;
+	}
+
+	.company-logo-item:hover {
+		transform: scale(1.05);
+	}
+
+	@keyframes scrollCompanies {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(
+				calc(-160px * 5)
+			); /* Adjust based on logo width + margin */
+		}
+	}
+
+	.company-carousel:hover {
+		animation-play-state: paused;
 	}
 }
