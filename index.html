@@ -8,11 +8,15 @@
 	</head>
 	<body>
 		<!-- Navbar -->
-		<nav class="fixed z-50 w-full bg-white shadow-lg md:px-4">
+		<nav class="fixed z-50 w-full shadow-lg bg-base-200 md:px-4">
 			<div class="max-w-screen-xl mx-auto navbar">
 				<div class="navbar-start">
 					<div class="dropdown">
-						<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+						<div
+							tabindex="0"
+							role="button"
+							class="btn btn-ghost text-base-content lg:hidden"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="w-5 h-5"
@@ -30,7 +34,7 @@
 						</div>
 						<ul
 							tabindex="0"
-							class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+							class="menu menu-sm dropdown-content bg-base-200 text-base-content rounded-box z-[1] mt-3 w-52 p-2 shadow"
 						>
 							<li><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
@@ -43,7 +47,7 @@
 					</a>
 				</div>
 				<div class="hidden navbar-center lg:flex">
-					<ul class="px-1 menu menu-horizontal">
+					<ul class="px-1 menu menu-horizontal text-base-content">
 						<li><a href="#home">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#offer">Offer</a></li>
@@ -51,7 +55,7 @@
 					</ul>
 				</div>
 				<div class="navbar-end">
-					<a class="btn btn-primary" href="tel:9910732501"
+					<a class="btn btn-primary text-primary-content" href="tel:9910732501"
 						><svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="20"
@@ -75,7 +79,7 @@
 		</nav>
 
 		<!-- Hero -->
-		<div id="home" class="min-h-screen pt-10 hero bg-neutral-50">
+		<div id="home" class="min-h-screen pt-10 hero bg-base-100">
 			<div
 				class="flex-col gap-8 px-4 py-8 mx-auto md:py-12 hero-content lg:flex-row-reverse max-w-7xl"
 			>
@@ -89,7 +93,7 @@
 				</div>
 
 				<!-- Hero Content -->
-				<div class="w-full text-center lg:w-1/2 lg:text-left">
+				<div class="w-full text-center text-base-content lg:w-1/2 lg:text-left">
 					<h1 class="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
 						Transform Your Career with Power BI & AI Mastery
 					</h1>
@@ -104,15 +108,15 @@
 							class="flex flex-wrap justify-center gap-2 my-3 lg:justify-start md:my-4"
 						>
 							<span
-								class="bg-sky-600 text-neutral-50 badge badge-md md:badge-lg"
+								class="bg-primary text-primary-content badge badge-md md:badge-lg"
 								>No Coding Required</span
 							>
 							<span
-								class="bg-teal-600 text-neutral-50 badge badge-md md:badge-lg"
+								class="bg-secondary text-secondary-content badge badge-md md:badge-lg"
 								>Microsoft Certified</span
 							>
 							<span
-								class="bg-indigo-600 badge text-neutral-50 badge-md md:badge-lg"
+								class="bg-primary text-primary-content badge badge-md md:badge-lg"
 								>3-Day Workshop</span
 							>
 						</div>
@@ -130,20 +134,22 @@
 							data-driven decisions to accelerate your career growth!
 						</p>
 
-						<div class="w-full my-4 overflow-x-auto shadow stats md:w-auto">
+						<div
+							class="w-full my-4 overflow-x-auto shadow stats bg-base-200 md:w-auto"
+						>
 							<div class="stat">
-								<div class="text-sm stat-title md:text-base">
+								<div class="text-sm stat-title text-base-content md:text-base">
 									Students Trained
 								</div>
-								<div class="text-2xl text-sky-600 stat-value md:text-4xl">
+								<div class="text-2xl text-primary stat-value md:text-4xl">
 									5000+
 								</div>
 							</div>
 							<div class="stat">
-								<div class="text-sm stat-title md:text-base">
+								<div class="text-sm stat-title text-base-content md:text-base">
 									Industry Experience
 								</div>
-								<div class="text-2xl text-teal-600 stat-value md:text-4xl">
+								<div class="text-2xl text-secondary stat-value md:text-4xl">
 									10+ Years
 								</div>
 							</div>
@@ -155,12 +161,29 @@
 					>
 						<a
 							href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
-							class="w-full btn btn-primary btn-md md:btn-lg sm:w-auto"
+							class="relative w-full overflow-hidden transition-transform btn text-primary-content md:max-w-96 btn-lg group hover:scale-110"
+							style="
+								background: linear-gradient(
+									-45deg,
+									#3b82f6,
+									#eab308,
+									#3b82f6,
+									#eab308
+								);
+								background-size: 400% 400%;
+								animation: gradient 15s ease infinite;
+							"
 						>
-							Enroll Now
+							<div class="flex flex-col items-center">
+								<div class="flex items-center gap-2">
+									<span class="text-xl font-bold">₹99</span>
+									<span class="text-sm line-through opacity-75">₹3999</span>
+								</div>
+								<span class="text-xs">Limited time offer</span>
+							</div>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								class="w-5 h-5 ml-2 md:w-6 md:h-6"
+								class="absolute w-5 h-5 ml-2 md:w-6 md:h-6 right-4"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -179,11 +202,13 @@
 		</div>
 
 		<!-- About/Features -->
-		<section id="about" class="px-4 py-16 bg-white">
+		<section id="about" class="px-4 py-16 bg-base-200">
 			<div class="mx-auto max-w-7xl">
 				<!-- Section Header -->
 				<div class="mb-12 text-center">
-					<h2 class="mb-4 text-3xl font-bold md:text-4xl">About the Program</h2>
+					<h2 class="mb-4 text-3xl font-bold text-base-content md:text-4xl">
+						About the Program
+					</h2>
 					<div class="w-24 h-1 mx-auto bg-primary"></div>
 				</div>
 
@@ -191,14 +216,14 @@
 				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 					<!-- Feature 1 -->
 					<div
-						class="transition-shadow duration-300 shadow-xl card bg-neutral-100 ring ring-teal-600 hover:shadow-2xl"
+						class="transition-shadow duration-300 shadow-xl card bg-base-200 ring ring-primary hover:shadow-2xl"
 					>
 						<div class="card-body">
 							<div class="flex items-start gap-4">
-								<div class="p-4 rounded-full bg-teal-600/15">
+								<div class="p-4 rounded-full bg-primary/15">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-teal-600"
+										class="w-8 h-8 text-primary"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
@@ -212,7 +237,7 @@
 									</svg>
 								</div>
 								<div>
-									<h3 class="mb-2 text-xl font-bold">
+									<h3 class="mb-2 text-xl font-bold text-base-content">
 										Learn Power BI with AI Dashboards
 									</h3>
 									<p class="text-base-content/80">
@@ -221,13 +246,13 @@
 										intermediate users alike.
 									</p>
 									<div class="flex flex-wrap gap-2 mt-4">
-										<span class="bg-teal-600 badge text-neutral-50"
+										<span class="bg-primary badge text-primary-content"
 											>Basics to Advanced</span
 										>
-										<span class="bg-teal-600 badge text-neutral-50"
+										<span class="bg-primary badge text-primary-content"
 											>AI Integration</span
 										>
-										<span class="bg-teal-600 badge text-neutral-50"
+										<span class="bg-primary badge text-primary-content"
 											>Hands-on Learning</span
 										>
 									</div>
@@ -238,60 +263,14 @@
 
 					<!-- Feature 2 -->
 					<div
-						class="transition-shadow duration-300 shadow-xl card bg-neutral-100 ring ring-sky-600 hover:shadow-2xl"
+						class="transition-shadow duration-300 shadow-xl card bg-base-200 ring ring-accent hover:shadow-2xl"
 					>
 						<div class="card-body">
 							<div class="flex items-start gap-4">
-								<div class="p-4 rounded-full bg-sky-600/15">
+								<div class="p-4 rounded-full bg-accent/15">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-sky-600"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-										/>
-									</svg>
-								</div>
-								<div>
-									<h3 class="mb-2 text-xl font-bold">
-										Real-World Case Studies
-									</h3>
-									<p class="text-base-content/80">
-										Work on actual business scenarios and learn how to solve
-										real-world problems using Power BI and AI technologies.
-									</p>
-									<div class="flex flex-wrap gap-2 mt-4">
-										<span class="bg-sky-600 badge text-neutral-50"
-											>Industry Projects</span
-										>
-										<span class="bg-sky-600 badge text-neutral-50"
-											>Practical Experience</span
-										>
-										<span class="bg-sky-600 badge text-neutral-50"
-											>Business Solutions</span
-										>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Feature 3 -->
-					<div
-						class="transition-shadow duration-300 shadow-xl card bg-neutral-100 ring ring-indigo-600 hover:shadow-2xl"
-					>
-						<div class="card-body">
-							<div class="flex items-start gap-4">
-								<div class="p-4 rounded-full bg-indigo-600/15">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-indigo-600"
+										class="w-8 h-8 text-accent"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
@@ -305,7 +284,7 @@
 									</svg>
 								</div>
 								<div>
-									<h3 class="mb-2 text-xl font-bold">
+									<h3 class="mb-2 text-xl font-bold text-base-content">
 										Microsoft Learn Certification
 									</h3>
 									<p class="text-base-content/80">
@@ -314,14 +293,60 @@
 										credentials.
 									</p>
 									<div class="flex flex-wrap gap-2 mt-4">
-										<span class="bg-indigo-600 badge text-neutral-50"
+										<span class="bg-primary badge text-accent-content"
 											>Official Certificate</span
 										>
-										<span class="bg-indigo-600 badge text-neutral-50"
+										<span class="bg-primary badge text-accent-content"
 											>Industry Recognition</span
 										>
-										<span class="bg-indigo-600 badge text-neutral-50"
+										<span class="bg-primary badge text-accent-content"
 											>Career Advancement</span
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Feature 3 -->
+					<div
+						class="transition-shadow duration-300 shadow-xl card bg-base-200 ring ring-secondary hover:shadow-2xl"
+					>
+						<div class="card-body">
+							<div class="flex items-start gap-4">
+								<div class="p-4 rounded-full bg-secondary/15">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-8 h-8 text-secondary"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+										/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="mb-2 text-xl font-bold text-base-content">
+										Real-World Case Studies
+									</h3>
+									<p class="text-base-content/80">
+										Work on actual business scenarios and learn how to solve
+										real-world problems using Power BI and AI technologies.
+									</p>
+									<div class="flex flex-wrap gap-2 mt-4">
+										<span class="bg-secondary badge text-secondary-content"
+											>Industry Projects</span
+										>
+										<span class="bg-secondary badge text-secondary-content"
+											>Practical Experience</span
+										>
+										<span class="bg-secondary badge text-secondary-content"
+											>Business Solutions</span
 										>
 									</div>
 								</div>
@@ -331,14 +356,14 @@
 
 					<!-- Feature 4 -->
 					<div
-						class="transition-shadow duration-300 shadow-xl ring ring-lime-600 card bg-neutral-100 hover:shadow-2xl"
+						class="transition-shadow duration-300 shadow-xl ring ring-secondary card bg-base-200 hover:shadow-2xl"
 					>
 						<div class="card-body">
 							<div class="flex items-start gap-4">
-								<div class="p-4 rounded-full bg-lime-600/15">
+								<div class="p-4 rounded-full bg-secondary/15">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-lime-600"
+										class="w-8 h-8 text-secondary"
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
@@ -352,7 +377,7 @@
 									</svg>
 								</div>
 								<div>
-									<h3 class="mb-2 text-xl font-bold">
+									<h3 class="mb-2 text-xl font-bold text-base-content">
 										Expert-Led Live Sessions
 									</h3>
 									<p class="text-base-content/80">
@@ -360,13 +385,13 @@
 										with proven track record of training 3000+ professionals.
 									</p>
 									<div class="flex flex-wrap gap-2 mt-4">
-										<span class="bg-lime-600 badge text-neutral-50"
+										<span class="bg-secondary badge text-secondary-content"
 											>Microsoft Certified</span
 										>
-										<span class="bg-lime-600 badge text-neutral-50"
+										<span class="bg-secondary badge text-secondary-content"
 											>3000+ Alumni</span
 										>
-										<span class="bg-lime-600 badge text-neutral-50"
+										<span class="bg-secondary badge text-secondary-content"
 											>Interactive Learning</span
 										>
 									</div>
@@ -377,15 +402,34 @@
 				</div>
 
 				<!-- Bottom CTA -->
-				<div class="mt-12 text-center">
+				<div
+					class="flex flex-col justify-center gap-3 mt-16 sm:flex-row md:gap-4"
+				>
 					<a
 						href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
-						class="btn btn-primary btn-lg"
+						class="relative w-full overflow-hidden transition-transform btn text-primary-content md:max-w-96 btn-lg group hover:scale-110"
+						style="
+							background: linear-gradient(
+								-45deg,
+								#3b82f6,
+								#eab308,
+								#3b82f6,
+								#eab308
+							);
+							background-size: 400% 400%;
+							animation: gradient 15s ease infinite;
+						"
 					>
-						Start Your Journey
+						<div class="flex flex-col items-center">
+							<div class="flex items-center gap-2">
+								<span class="text-xl font-bold">₹99</span>
+								<span class="text-sm line-through opacity-75">₹3999</span>
+							</div>
+							<span class="text-xs">Limited time offer</span>
+						</div>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="w-6 h-6 ml-2"
+							class="absolute w-5 h-5 ml-2 md:w-6 md:h-6 right-4"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -403,11 +447,11 @@
 		</section>
 
 		<!-- Reviews/Testimonials -->
-		<section class="px-4 py-16 bg-neutral-50">
+		<section class="px-4 py-16 bg-base-200">
 			<div class="mx-auto max-w-7xl">
 				<!-- Section Header -->
 				<div class="mb-12 text-center">
-					<h2 class="mb-4 text-3xl font-bold md:text-4xl">
+					<h2 class="mb-4 text-3xl font-bold text-base-content md:text-4xl">
 						What Our Students Say
 					</h2>
 					<p class="max-w-2xl mx-auto text-lg text-base-content/70">
@@ -448,8 +492,12 @@
 										</div>
 									</div>
 									<div>
-										<h3 class="text-lg font-bold">Sarah Johnson</h3>
-										<p class="text-sm opacity-70">Data Analyst at Microsoft</p>
+										<h3 class="text-lg font-bold text-base-content">
+											Sarah Johnson
+										</h3>
+										<p class="text-sm text-base-content/70">
+											Data Analyst at Microsoft
+										</p>
 									</div>
 								</div>
 
@@ -463,7 +511,7 @@
 								<div class="flex items-center gap-1 mt-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -473,7 +521,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -483,7 +531,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -493,7 +541,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -503,7 +551,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -514,7 +562,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- Review 2 -->
+						<!-- Testimonial 2 -->
 						<div
 							class="testimonial-card shadow-xl card bg-base-100 w-[350px] mx-4"
 						>
@@ -542,8 +590,12 @@
 										</div>
 									</div>
 									<div>
-										<h3 class="text-lg font-bold">Sarah Johnson</h3>
-										<p class="text-sm opacity-70">Data Analyst at Microsoft</p>
+										<h3 class="text-lg font-bold text-base-content">
+											Sarah Johnson
+										</h3>
+										<p class="text-sm text-base-content/70">
+											Data Analyst at Microsoft
+										</p>
 									</div>
 								</div>
 
@@ -557,7 +609,7 @@
 								<div class="flex items-center gap-1 mt-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -567,7 +619,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -577,7 +629,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -587,7 +639,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -597,7 +649,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -608,7 +660,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- Review 3 -->
+						<!-- Testimonial 3 -->
 						<div
 							class="testimonial-card shadow-xl card bg-base-100 w-[350px] mx-4"
 						>
@@ -636,8 +688,12 @@
 										</div>
 									</div>
 									<div>
-										<h3 class="text-lg font-bold">Sarah Johnson</h3>
-										<p class="text-sm opacity-70">Data Analyst at Microsoft</p>
+										<h3 class="text-lg font-bold text-base-content">
+											Sarah Johnson
+										</h3>
+										<p class="text-sm text-base-content/70">
+											Data Analyst at Microsoft
+										</p>
 									</div>
 								</div>
 
@@ -651,7 +707,7 @@
 								<div class="flex items-center gap-1 mt-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -661,7 +717,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -671,7 +727,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -681,7 +737,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -691,7 +747,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -702,7 +758,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- Copy and paste for scrolling animation -->
+						<!-- Testimonial 4 -->
 						<div
 							class="testimonial-card shadow-xl card bg-base-100 w-[350px] mx-4"
 						>
@@ -730,8 +786,12 @@
 										</div>
 									</div>
 									<div>
-										<h3 class="text-lg font-bold">Sarah Johnson</h3>
-										<p class="text-sm opacity-70">Data Analyst at Microsoft</p>
+										<h3 class="text-lg font-bold text-base-content">
+											Sarah Johnson
+										</h3>
+										<p class="text-sm text-base-content/70">
+											Data Analyst at Microsoft
+										</p>
 									</div>
 								</div>
 
@@ -745,7 +805,7 @@
 								<div class="flex items-center gap-1 mt-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -755,7 +815,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -765,7 +825,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -775,7 +835,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -785,7 +845,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -796,7 +856,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- Review 2 -->
+						<!-- Testimonial 5 -->
 						<div
 							class="testimonial-card shadow-xl card bg-base-100 w-[350px] mx-4"
 						>
@@ -824,8 +884,12 @@
 										</div>
 									</div>
 									<div>
-										<h3 class="text-lg font-bold">Sarah Johnson</h3>
-										<p class="text-sm opacity-70">Data Analyst at Microsoft</p>
+										<h3 class="text-lg font-bold text-base-content">
+											Sarah Johnson
+										</h3>
+										<p class="text-sm text-base-content/70">
+											Data Analyst at Microsoft
+										</p>
 									</div>
 								</div>
 
@@ -839,7 +903,7 @@
 								<div class="flex items-center gap-1 mt-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -849,7 +913,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -859,7 +923,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -869,7 +933,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -879,7 +943,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -890,7 +954,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- Review 3 -->
+						<!-- Testimonial 6 -->
 						<div
 							class="testimonial-card shadow-xl card bg-base-100 w-[350px] mx-4"
 						>
@@ -918,8 +982,12 @@
 										</div>
 									</div>
 									<div>
-										<h3 class="text-lg font-bold">Sarah Johnson</h3>
-										<p class="text-sm opacity-70">Data Analyst at Microsoft</p>
+										<h3 class="text-lg font-bold text-base-content">
+											Sarah Johnson
+										</h3>
+										<p class="text-sm text-base-content/70">
+											Data Analyst at Microsoft
+										</p>
 									</div>
 								</div>
 
@@ -933,7 +1001,7 @@
 								<div class="flex items-center gap-1 mt-4">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -943,7 +1011,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -953,7 +1021,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -963,7 +1031,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -973,7 +1041,7 @@
 									</svg>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 text-yellow-400"
+										class="w-5 h-5 text-secondary"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 									>
@@ -987,20 +1055,22 @@
 					</div>
 
 					<!-- Stats Section -->
-					<div class="w-full mt-16 shadow stats">
+					<div class="w-full mt-16 shadow stats bg-base-100">
 						<div class="stat place-items-center">
-							<div class="stat-title">Happy Students</div>
+							<div class="stat-title text-base-content/70">Happy Students</div>
 							<div class="stat-value text-primary">5,000+</div>
-							<div class="stat-desc">Around The World</div>
+							<div class="stat-desc text-base-content/60">Around The World</div>
 						</div>
 
 						<div class="stat place-items-center">
-							<div class="stat-title">Average Rating</div>
+							<div class="stat-title text-base-content/70">Average Rating</div>
 							<div class="stat-value text-secondary">4.9/5</div>
-							<div class="flex items-center justify-center gap-1 stat-desc">
+							<div
+								class="flex items-center justify-center gap-1 stat-desc text-base-content/60"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									class="w-4 h-4 text-yellow-400"
+									class="w-4 h-4 text-secondary"
 									fill="currentColor"
 									viewBox="0 0 24 24"
 								>
@@ -1013,9 +1083,11 @@
 						</div>
 
 						<div class="stat place-items-center">
-							<div class="stat-title">Career Growth</div>
+							<div class="stat-title text-base-content/70">Career Growth</div>
 							<div class="stat-value text-accent">40%</div>
-							<div class="stat-desc">Average Salary Increase</div>
+							<div class="stat-desc text-base-content/60">
+								Average Salary Increase
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1023,11 +1095,11 @@
 		</section>
 
 		<!-- Dashboards -->
-		<section class="px-4 py-16 bg-white">
+		<section class="px-4 py-16 bg-darkBg text-base-content">
 			<div class="mx-auto max-w-7xl">
 				<!-- Section Header -->
 				<div class="mb-16 text-center">
-					<h2 class="mb-6 text-3xl font-bold md:text-4xl">
+					<h2 class="mb-6 text-3xl font-bold md:text-4xl text-base-content">
 						Learn to Create Powerful Dashboards using AI
 					</h2>
 					<p class="max-w-3xl mx-auto text-lg text-base-content/70">
@@ -1038,22 +1110,23 @@
 						organization.
 					</p>
 				</div>
-
 				<!-- Dashboard Showcases -->
 				<!-- Business Dashboard -->
 				<div class="flex flex-col items-center gap-8 mb-20 lg:flex-row">
-					<div class="lg:w-1/2">
+					<div class="lg:w-1/2 lg:flex lg:justify-center">
 						<div class="overflow-hidden shadow-2xl">
 							<img
 								src="d1.png"
 								alt="Business Performance Dashboard"
-								class="w-full transition-transform duration-300 hover:scale-105"
+								class="w-full max-w-lg transition-transform duration-300 lg:max-w-96 hover:scale-105"
 							/>
 						</div>
 					</div>
 					<div class="space-y-4 lg:w-1/2">
 						<div class="badge badge-primary">Business Intelligence</div>
-						<h3 class="text-2xl font-bold">Overall Business Dashboard</h3>
+						<h3 class="text-2xl font-bold text-base-content">
+							Overall Business Dashboard
+						</h3>
 						<p class="text-base-content/70">
 							Master the creation of comprehensive dashboards that provide a
 							holistic view of your company's performance. Learn to integrate
@@ -1062,55 +1135,73 @@
 							business metrics.
 						</p>
 						<div class="flex flex-wrap gap-2">
-							<span class="badge badge-outline">KPI Tracking</span>
-							<span class="badge badge-outline">Performance Metrics</span>
-							<span class="badge badge-outline">AI Insights</span>
+							<span class="badge badge-outline text-base-content"
+								>KPI Tracking</span
+							>
+							<span class="badge badge-outline text-base-content"
+								>Performance Metrics</span
+							>
+							<span class="badge badge-outline text-base-content"
+								>AI Insights</span
+							>
 						</div>
 					</div>
 				</div>
 
 				<!-- Sales Dashboard -->
-				<div class="flex flex-col items-center gap-8 mb-20 lg:flex-row-reverse">
-					<div class="lg:w-1/2">
+				<div
+					class="flex flex-col items-center gap-8 mb-20 lg:text-right lg:flex-row-reverse"
+				>
+					<div class="lg:w-1/2 lg:flex lg:justify-center">
 						<div class="overflow-hidden shadow-2xl">
 							<img
 								src="d2.png"
 								alt="Sales and Marketing Dashboard"
-								class="w-full transition-transform duration-300 hover:scale-105"
+								class="w-full max-w-lg transition-transform duration-300 lg:max-w-96 hover:scale-105"
 							/>
 						</div>
 					</div>
 					<div class="space-y-4 lg:w-1/2">
 						<div class="badge badge-secondary">Sales Analytics</div>
-						<h3 class="text-2xl font-bold">Sales and Marketing Dashboard</h3>
+						<h3 class="text-2xl font-bold text-base-content">
+							Sales and Marketing Dashboard
+						</h3>
 						<p class="text-base-content/70">
 							Build dynamic dashboards that track sales performance, marketing
 							campaign effectiveness, and customer engagement metrics. Learn to
 							implement AI-driven forecasting and customer behavior analysis to
 							optimize your sales and marketing strategies.
 						</p>
-						<div class="flex flex-wrap gap-2">
-							<span class="badge badge-outline">Revenue Tracking</span>
-							<span class="badge badge-outline">Campaign Analytics</span>
-							<span class="badge badge-outline">Customer Insights</span>
+						<div class="flex flex-wrap gap-2 lg:justify-end">
+							<span class="badge badge-outline text-base-content"
+								>Revenue Tracking</span
+							>
+							<span class="badge badge-outline text-base-content"
+								>Campaign Analytics</span
+							>
+							<span class="badge badge-outline text-base-content"
+								>Customer Insights</span
+							>
 						</div>
 					</div>
 				</div>
 
 				<!-- Finance Dashboard -->
 				<div class="flex flex-col items-center gap-8 mb-12 lg:flex-row">
-					<div class="lg:w-1/2">
+					<div class="lg:w-1/2 lg:flex lg:justify-center">
 						<div class="overflow-hidden shadow-2xl">
 							<img
 								src="d3.png"
 								alt="Financial Analysis Dashboard"
-								class="w-full transition-transform duration-300 hover:scale-105"
+								class="w-full max-w-lg transition-transform duration-300 lg:max-w-96 hover:scale-105"
 							/>
 						</div>
 					</div>
 					<div class="space-y-4 lg:w-1/2">
 						<div class="badge badge-accent">Financial Intelligence</div>
-						<h3 class="text-2xl font-bold">Finance Dashboard</h3>
+						<h3 class="text-2xl font-bold text-base-content">
+							Finance Dashboard
+						</h3>
 						<p class="text-base-content/70">
 							Develop sophisticated financial dashboards that provide deep
 							insights into your company's financial health. Learn to create
@@ -1118,9 +1209,15 @@
 							reporting systems for better financial decision-making.
 						</p>
 						<div class="flex flex-wrap gap-2">
-							<span class="badge badge-outline">Financial Metrics</span>
-							<span class="badge badge-outline">Profit Analysis</span>
-							<span class="badge badge-outline">Forecasting</span>
+							<span class="badge badge-outline text-base-content"
+								>Financial Metrics</span
+							>
+							<span class="badge badge-outline text-base-content"
+								>Profit Analysis</span
+							>
+							<span class="badge badge-outline text-base-content"
+								>Forecasting</span
+							>
 						</div>
 					</div>
 				</div>
@@ -1128,7 +1225,7 @@
 				<!-- Call to Action -->
 				<div class="mt-16 text-center">
 					<div class="max-w-2xl mx-auto mb-8">
-						<h3 class="mb-4 text-2xl font-bold">
+						<h3 class="mb-4 text-2xl font-bold text-base-content">
 							Ready to Master Power BI Dashboard Creation?
 						</h3>
 						<p class="text-base-content/70">
@@ -1136,15 +1233,32 @@
 							from industry experts.
 						</p>
 					</div>
-					<div class="flex flex-col justify-center gap-4 sm:flex-row">
+					<div class="flex flex-col justify-center gap-3 sm:flex-row md:gap-4">
 						<a
 							href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
-							class="btn btn-primary btn-lg"
+							class="relative w-full overflow-hidden transition-transform btn text-primary-content md:max-w-96 btn-lg group hover:scale-110"
+							style="
+								background: linear-gradient(
+									-45deg,
+									#3b82f6,
+									#eab308,
+									#3b82f6,
+									#eab308
+								);
+								background-size: 400% 400%;
+								animation: gradient 15s ease infinite;
+							"
 						>
-							Start Learning Now
+							<div class="flex flex-col items-center">
+								<div class="flex items-center gap-2">
+									<span class="text-xl font-bold">₹99</span>
+									<span class="text-sm line-through opacity-75">₹3999</span>
+								</div>
+								<span class="text-xs">Limited time offer</span>
+							</div>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6 ml-2"
+								class="absolute w-5 h-5 ml-2 md:w-6 md:h-6 right-4"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -1163,11 +1277,11 @@
 		</section>
 
 		<!-- Company Logos -->
-		<section class="px-4 py-16 bg-white">
+		<section class="px-4 py-16 bg-base-100">
 			<div class="mx-auto max-w-7xl">
 				<!-- Section Header -->
 				<div class="mb-12 text-center">
-					<h2 class="mb-4 text-3xl font-bold md:text-4xl">
+					<h2 class="mb-4 text-3xl font-bold text-base-content md:text-4xl">
 						Some of our Trained Candidates work at
 					</h2>
 					<div class="w-24 h-1 mx-auto mt-4 bg-primary"></div>
@@ -1185,7 +1299,7 @@
 								class="flex items-center justify-center mx-8 company-logo-item"
 							>
 								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
+									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-neutral"
 								>
 									<img
 										src="c1.webp"
@@ -1194,64 +1308,17 @@
 									/>
 								</div>
 							</div>
+						</div>
+						<!-- Logo 2 -->
+						<div
+							class="flex items-center justify-center mx-8 company-logo-item"
+						>
+							<!-- Using a placeholder for demo. Replace with actual company logos -->
 							<div
 								class="flex items-center justify-center mx-8 company-logo-item"
 							>
 								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
-								>
-									<img
-										src="c2.webp"
-										alt="Company Name"
-										class="object-contain max-w-full max-h-full"
-									/>
-								</div>
-							</div>
-							<div
-								class="flex items-center justify-center mx-8 company-logo-item"
-							>
-								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
-								>
-									<img
-										src="c3.webp"
-										alt="Company Name"
-										class="object-contain max-w-full max-h-full"
-									/>
-								</div>
-							</div>
-							<div
-								class="flex items-center justify-center mx-8 company-logo-item"
-							>
-								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
-								>
-									<img
-										src="c4.webp"
-										alt="Company Name"
-										class="object-contain max-w-full max-h-full"
-									/>
-								</div>
-							</div>
-							<div
-								class="flex items-center justify-center mx-8 company-logo-item"
-							>
-								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
-								>
-									<img
-										src="c5.webp"
-										alt="Company Name"
-										class="object-contain max-w-full max-h-full"
-									/>
-								</div>
-							</div>
-							<!-- Repetetion -->
-							<div
-								class="flex items-center justify-center mx-8 company-logo-item"
-							>
-								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
+									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-neutral"
 								>
 									<img
 										src="c1.webp"
@@ -1260,53 +1327,77 @@
 									/>
 								</div>
 							</div>
+						</div>
+						<!-- Logo 3 -->
+						<div
+							class="flex items-center justify-center mx-8 company-logo-item"
+						>
+							<!-- Using a placeholder for demo. Replace with actual company logos -->
 							<div
 								class="flex items-center justify-center mx-8 company-logo-item"
 							>
 								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
+									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-neutral"
 								>
 									<img
-										src="c2.webp"
+										src="c1.webp"
 										alt="Company Name"
 										class="object-contain max-w-full max-h-full"
 									/>
 								</div>
 							</div>
+						</div>
+						<!-- Logo 4 -->
+						<div
+							class="flex items-center justify-center mx-8 company-logo-item"
+						>
+							<!-- Using a placeholder for demo. Replace with actual company logos -->
 							<div
 								class="flex items-center justify-center mx-8 company-logo-item"
 							>
 								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
+									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-neutral"
 								>
 									<img
-										src="c3.webp"
+										src="c1.webp"
 										alt="Company Name"
 										class="object-contain max-w-full max-h-full"
 									/>
 								</div>
 							</div>
+						</div>
+						<!-- Logo 5 -->
+						<div
+							class="flex items-center justify-center mx-8 company-logo-item"
+						>
+							<!-- Using a placeholder for demo. Replace with actual company logos -->
 							<div
 								class="flex items-center justify-center mx-8 company-logo-item"
 							>
 								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
+									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-neutral"
 								>
 									<img
-										src="c4.webp"
+										src="c1.webp"
 										alt="Company Name"
 										class="object-contain max-w-full max-h-full"
 									/>
 								</div>
 							</div>
+						</div>
+						<!-- Logo 6 -->
+						<div
+							class="flex items-center justify-center mx-8 company-logo-item"
+						>
+							<!-- Using a placeholder for demo. Replace with actual company logos -->
 							<div
 								class="flex items-center justify-center mx-8 company-logo-item"
 							>
 								<div
-									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-base-100"
+									class="flex items-center justify-center w-32 h-16 p-4 rounded-lg shadow-md bg-neutral"
 								>
 									<img
-										src="c5.webp"
+										src="c1.webp"
 										alt="Company Name"
 										class="object-contain max-w-full max-h-full"
 									/>
@@ -1320,11 +1411,13 @@
 		</section>
 
 		<!-- Industries -->
-		<section class="px-4 py-20 bg-neutral-50">
+		<section class="px-4 py-20 bg-darkBg">
 			<div class="mx-auto max-w-7xl">
 				<!-- Section Header -->
 				<div class="mb-16 text-center">
-					<h2 class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+					<h2
+						class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl text-base-content"
+					>
 						Power BI Career Opportunities
 					</h2>
 					<p class="max-w-2xl mx-auto text-lg text-base-content/70">
@@ -1333,12 +1426,11 @@
 					</p>
 					<div class="w-24 h-1 mx-auto mt-4 bg-primary"></div>
 				</div>
-
 				<!-- Job Profiles Grid -->
 				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					<!-- Finance Card -->
 					<div class="transition-all duration-300 hover:scale-105">
-						<div class="h-full p-6 shadow-lg card bg-base-100 hover:shadow-xl">
+						<div class="h-full p-6 shadow-lg card bg-base-300 hover:shadow-xl">
 							<figure class="p-4">
 								<div class="p-4 rounded-full bg-primary/10">
 									<svg
@@ -1366,13 +1458,15 @@
 								</div>
 							</figure>
 							<div class="card-body">
-								<h3 class="card-title">Finance Professionals</h3>
+								<h3 class="card-title text-base-content">
+									Finance Professionals
+								</h3>
 								<p class="text-base-content/70">
 									Transform financial data into actionable insights. Master
 									budgeting, forecasting, and performance analytics using
 									AI-powered dashboards.
 								</p>
-								<ul class="mt-4 space-y-2">
+								<ul class="mt-4 space-y-2 text-base-content">
 									<li class="flex items-center gap-2">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -1425,12 +1519,12 @@
 
 					<!-- Marketing Card -->
 					<div class="transition-all duration-300 hover:scale-105">
-						<div class="h-full p-6 shadow-lg card bg-base-100 hover:shadow-xl">
+						<div class="h-full p-6 shadow-lg card bg-base-300 hover:shadow-xl">
 							<figure class="p-4">
-								<div class="p-4 rounded-full bg-primary/10">
+								<div class="p-4 rounded-full bg-secondary/10">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-primary"
+										class="w-8 h-8 text-secondary"
 										width="24"
 										height="24"
 										viewBox="0 0 24 24"
@@ -1452,13 +1546,13 @@
 								</div>
 							</figure>
 							<div class="card-body">
-								<h3 class="card-title">Marketing & Sales</h3>
+								<h3 class="card-title text-base-content">Marketing & Sales</h3>
 								<p class="text-base-content/70">
 									Drive data-driven marketing decisions with advanced analytics.
 									Track campaigns, segment customers, and optimize ROI in
 									real-time.
 								</p>
-								<ul class="mt-4 space-y-2">
+								<ul class="mt-4 space-y-2 text-base-content">
 									<li class="flex items-center gap-2">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -1511,7 +1605,7 @@
 
 					<!-- IT Professionals Card -->
 					<div class="transition-all duration-300 hover:scale-105">
-						<div class="h-full p-6 shadow-lg card bg-base-100 hover:shadow-xl">
+						<div class="h-full p-6 shadow-lg card bg-base-300 hover:shadow-xl">
 							<figure class="p-4">
 								<div class="p-4 rounded-full bg-primary/10">
 									<svg
@@ -1533,12 +1627,12 @@
 								</div>
 							</figure>
 							<div class="card-body">
-								<h3 class="card-title">IT Professionals</h3>
+								<h3 class="card-title text-base-content">IT Professionals</h3>
 								<p class="text-base-content/70">
 									Enhance IT operations with data-driven insights. Monitor
 									performance, track KPIs, and optimize resource allocation.
 								</p>
-								<ul class="mt-4 space-y-2">
+								<ul class="mt-4 space-y-2 text-base-content">
 									<li class="flex items-center gap-2">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -1591,12 +1685,12 @@
 
 					<!-- Retail Card -->
 					<div class="transition-all duration-300 hover:scale-105">
-						<div class="h-full p-6 shadow-lg card bg-base-100 hover:shadow-xl">
+						<div class="h-full p-6 shadow-lg card bg-base-300 hover:shadow-xl">
 							<figure class="p-4">
-								<div class="p-4 rounded-full bg-primary/10">
+								<div class="p-4 rounded-full bg-secondary/10">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-primary"
+										class="w-8 h-8 text-secondary"
 										width="24"
 										height="24"
 										viewBox="0 0 24 24"
@@ -1613,12 +1707,12 @@
 								</div>
 							</figure>
 							<div class="card-body">
-								<h3 class="card-title">Retail Analytics</h3>
+								<h3 class="card-title text-base-content">Retail Analytics</h3>
 								<p class="text-base-content/70">
 									Optimize retail operations with real-time analytics. Master
 									inventory management and customer behavior analysis.
 								</p>
-								<ul class="mt-4 space-y-2">
+								<ul class="mt-4 space-y-2 text-base-content">
 									<li class="flex items-center gap-2">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -1671,7 +1765,7 @@
 
 					<!-- Freshers Card -->
 					<div class="transition-all duration-300 hover:scale-105">
-						<div class="h-full p-6 shadow-lg card bg-base-100 hover:shadow-xl">
+						<div class="h-full p-6 shadow-lg card bg-base-300 hover:shadow-xl">
 							<figure class="p-4">
 								<div class="p-4 rounded-full bg-primary/10">
 									<svg
@@ -1686,18 +1780,19 @@
 										stroke-linecap="round"
 										stroke-linejoin="round"
 									>
-										<path d="M22 10v6M2 10l10-5 10 5-10 5z" />
 										<path d="M6 12v5c3 3 9 3 12 0v-5" />
 									</svg>
 								</div>
 							</figure>
 							<div class="card-body">
-								<h3 class="card-title">Graduates & Freshers</h3>
+								<h3 class="card-title text-base-content">
+									Graduates & Freshers
+								</h3>
 								<p class="text-base-content/70">
 									Launch your career in data analytics. Get industry-ready with
 									hands-on Power BI training and real-world projects.
 								</p>
-								<ul class="mt-4 space-y-2">
+								<ul class="mt-4 space-y-2 text-base-content">
 									<li class="flex items-center gap-2">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -1750,12 +1845,12 @@
 
 					<!-- Project Management Card -->
 					<div class="transition-all duration-300 hover:scale-105">
-						<div class="h-full p-6 shadow-lg card bg-base-100 hover:shadow-xl">
+						<div class="h-full p-6 shadow-lg card bg-base-300 hover:shadow-xl">
 							<figure class="p-4">
-								<div class="p-4 rounded-full bg-primary/10">
+								<div class="p-4 rounded-full bg-secondary/10">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="w-8 h-8 text-primary"
+										class="w-8 h-8 text-secondary"
 										width="24"
 										height="24"
 										viewBox="0 0 24 24"
@@ -1775,12 +1870,12 @@
 								</div>
 							</figure>
 							<div class="card-body">
-								<h3 class="card-title">Project Management</h3>
+								<h3 class="card-title text-base-content">Project Management</h3>
 								<p class="text-base-content/70">
 									Leverage AI-powered analytics to predict and prevent project
 									challenges. Optimize resource allocation and track milestones.
 								</p>
-								<ul class="mt-4 space-y-2">
+								<ul class="mt-4 space-y-2 text-base-content">
 									<li class="flex items-center gap-2">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -1838,25 +1933,46 @@
 						Ready to advance your career with Power BI? Join thousands of
 						successful professionals!
 					</p>
-					<a
-						href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
-						class="gap-2 btn btn-primary btn-lg"
-					>
-						Start Your Journey Now
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="w-5 h-5"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
+
+					<div class="flex flex-col justify-center gap-3 sm:flex-row md:gap-4">
+						<a
+							href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
+							class="relative w-full overflow-hidden transition-transform btn text-primary-content md:max-w-96 btn-lg group hover:scale-110"
+							style="
+								background: linear-gradient(
+									-45deg,
+									#3b82f6,
+									#eab308,
+									#3b82f6,
+									#eab308
+								);
+								background-size: 200% 200%;
+								animation: gradient 10s ease infinite;
+							"
 						>
-							<line x1="5" y1="12" x2="19" y2="12"></line>
-							<polyline points="12 5 19 12 12 19"></polyline>
-						</svg>
-					</a>
+							<div class="flex flex-col items-center">
+								<div class="flex items-center gap-2">
+									<span class="text-xl font-bold">₹99</span>
+									<span class="text-sm line-through opacity-75">₹3999</span>
+								</div>
+								<span class="text-xs">Limited time offer</span>
+							</div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="absolute w-5 h-5 ml-2 md:w-6 md:h-6 right-4"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M13 7l5 5m0 0l-5 5m5-5H6"
+								/>
+							</svg>
+						</a>
+					</div>
 				</div>
 
 				<!-- Trust Indicators -->
@@ -1866,7 +1982,7 @@
 						<p class="mt-2 text-sm text-base-content/70">Placement Rate</p>
 					</div>
 					<div class="text-center">
-						<div class="text-4xl font-bold text-primary">5000+</div>
+						<div class="text-4xl font-bold text-secondary">5000+</div>
 						<p class="mt-2 text-sm text-base-content/70">
 							Trained Professionals
 						</p>
@@ -1876,7 +1992,7 @@
 						<p class="mt-2 text-sm text-base-content/70">Average Salary Hike</p>
 					</div>
 					<div class="text-center">
-						<div class="text-4xl font-bold text-primary">10+</div>
+						<div class="text-4xl font-bold text-secondary">10+</div>
 						<p class="mt-2 text-sm text-base-content/70">Years Experience</p>
 					</div>
 				</div>
@@ -1884,11 +2000,13 @@
 		</section>
 
 		<!-- Bonus Content -->
-		<section id="offer" class="px-4 py-24 bg-neutral-50">
+		<section id="offer" class="px-4 py-24 bg-base-200">
 			<div class="mx-auto max-w-7xl">
 				<!-- Section Header -->
 				<div class="mb-16 text-center">
-					<h2 class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+					<h2
+						class="mb-4 text-3xl font-bold text-base-content md:text-4xl lg:text-5xl"
+					>
 						Exclusive Free Bonuses
 					</h2>
 					<p class="max-w-2xl mx-auto text-lg text-base-content/70">
@@ -1903,16 +2021,16 @@
 					<!-- Excel Tutorials Card -->
 					<div class="transition-all duration-300 hover:-translate-y-2">
 						<div
-							class="h-full overflow-hidden bg-white rounded-2xl ring-1 ring-gray-200 hover:ring-teal-600/20 hover:shadow-xl hover:shadow-teal-600/10"
+							class="h-full overflow-hidden bg-base-300 rounded-2xl ring-1 ring-primary/20 hover:ring-secondary/20 hover:shadow-xl hover:shadow-secondary/10"
 						>
 							<figure class="px-6 pt-6">
 								<div
-									class="relative w-full overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-teal-50 to-teal-100"
+									class="relative w-full overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-primary/10 to-primary/20"
 								>
 									<div class="absolute inset-0">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-full h-full p-8 text-teal-600 opacity-20"
+											class="w-full h-full p-8 text-primary opacity-20"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -1933,25 +2051,27 @@
 										</svg>
 									</div>
 									<div
-										class="absolute px-4 py-2 text-sm font-semibold text-teal-600 rounded-full bg-teal-600/10 top-4 right-4"
+										class="absolute px-4 py-2 text-sm font-semibold rounded-full text-primary bg-primary/10 top-4 right-4"
 									>
 										Worth ₹5,000
 									</div>
 								</div>
 							</figure>
 							<div class="p-6">
-								<h3 class="mb-3 text-xl font-semibold">
+								<h3 class="mb-3 text-xl font-semibold text-base-content">
 									Advanced Excel Mastery Pack
 								</h3>
-								<p class="mb-6 text-gray-600">
+								<p class="mb-6 text-base-content/70">
 									Comprehensive Excel tutorials, time-saving shortcuts, and
 									advanced formulas to supercharge your data analysis skills.
 								</p>
 								<ul class="space-y-3">
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-teal-600"
+											class="w-5 h-5 text-primary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -1963,10 +2083,12 @@
 										</svg>
 										100+ Excel Shortcuts
 									</li>
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-teal-600"
+											class="w-5 h-5 text-primary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -1978,10 +2100,12 @@
 										</svg>
 										Advanced Formula Guide
 									</li>
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-teal-600"
+											class="w-5 h-5 text-primary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2001,16 +2125,16 @@
 					<!-- Power BI Templates Card -->
 					<div class="transition-all duration-300 hover:-translate-y-2">
 						<div
-							class="h-full overflow-hidden bg-white rounded-2xl ring-1 ring-gray-200 hover:ring-sky-600/20 hover:shadow-xl hover:shadow-sky-600/10"
+							class="h-full overflow-hidden bg-base-300 rounded-2xl ring-1 ring-secondary/20 hover:ring-primary/20 hover:shadow-xl hover:shadow-primary/10"
 						>
 							<figure class="px-6 pt-6">
 								<div
-									class="relative w-full overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-sky-50 to-sky-100"
+									class="relative w-full overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-secondary/10 to-secondary/20"
 								>
 									<div class="absolute inset-0">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-full h-full p-8 text-sky-600 opacity-20"
+											class="w-full h-full p-8 text-secondary opacity-20"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2025,25 +2149,27 @@
 										</svg>
 									</div>
 									<div
-										class="absolute px-4 py-2 text-sm font-semibold rounded-full bg-sky-600/10 text-sky-600 top-4 right-4"
+										class="absolute px-4 py-2 text-sm font-semibold rounded-full bg-secondary/10 text-secondary top-4 right-4"
 									>
 										Worth ₹7,000
 									</div>
 								</div>
 							</figure>
 							<div class="p-6">
-								<h3 class="mb-3 text-xl font-semibold">
+								<h3 class="mb-3 text-xl font-semibold text-base-content">
 									Premium Power BI Templates
 								</h3>
-								<p class="mb-6 text-gray-600">
+								<p class="mb-6 text-base-content/70">
 									Ready-to-use professional templates and resources to jumpstart
 									your Power BI journey.
 								</p>
 								<ul class="space-y-3">
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-sky-600"
+											class="w-5 h-5 text-secondary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2055,10 +2181,12 @@
 										</svg>
 										20+ Dashboard Templates
 									</li>
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-sky-600"
+											class="w-5 h-5 text-secondary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2070,10 +2198,12 @@
 										</svg>
 										Custom Visuals Pack
 									</li>
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-sky-600"
+											class="w-5 h-5 text-secondary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2093,16 +2223,16 @@
 					<!-- Certification Badge Card -->
 					<div class="transition-all duration-300 hover:-translate-y-2">
 						<div
-							class="h-full overflow-hidden bg-white rounded-2xl ring-1 ring-gray-200 hover:ring-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/10"
+							class="h-full overflow-hidden bg-base-300 rounded-2xl ring-1 ring-primary/20 hover:ring-secondary/20 hover:shadow-xl hover:shadow-secondary/10"
 						>
 							<figure class="px-6 pt-6">
 								<div
-									class="relative w-full overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-indigo-50 to-indigo-100"
+									class="relative w-full overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-primary/10 to-primary/20"
 								>
 									<div class="absolute inset-0">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-full h-full p-8 text-indigo-600 opacity-20"
+											class="w-full h-full p-8 text-primary opacity-20"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2115,25 +2245,27 @@
 										</svg>
 									</div>
 									<div
-										class="absolute px-4 py-2 text-sm font-semibold text-indigo-600 rounded-full bg-indigo-600/10 top-4 right-4"
+										class="absolute px-4 py-2 text-sm font-semibold rounded-full text-primary bg-primary/10 top-4 right-4"
 									>
 										Worth ₹3,000
 									</div>
 								</div>
 							</figure>
 							<div class="p-6">
-								<h3 class="mb-3 text-xl font-semibold">
+								<h3 class="mb-3 text-xl font-semibold text-base-content">
 									Microsoft Certification Support
 								</h3>
-								<p class="mb-6 text-gray-600">
+								<p class="mb-6 text-base-content/70">
 									Get certified with Microsoft Learn and showcase your expertise
 									with an industry-recognized digital badge.
 								</p>
 								<ul class="space-y-3">
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-indigo-600"
+											class="w-5 h-5 text-primary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2145,10 +2277,12 @@
 										</svg>
 										Exam Preparation Guide
 									</li>
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-indigo-600"
+											class="w-5 h-5 text-primary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2160,10 +2294,12 @@
 										</svg>
 										Practice Tests
 									</li>
-									<li class="flex items-center gap-3 text-sm text-gray-600">
+									<li
+										class="flex items-center gap-3 text-sm text-base-content/70"
+									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5 text-indigo-600"
+											class="w-5 h-5 text-primary"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
@@ -2184,11 +2320,11 @@
 		</section>
 
 		<!-- What to expect -->
-		<section class="py-16 bg-neutral-50">
+		<section class="py-16 bg-base-200">
 			<div class="container px-4 mx-auto">
 				<!-- Header Section -->
 				<div class="mb-12 text-center">
-					<h2 class="mb-4 text-4xl font-bold">
+					<h2 class="mb-4 text-4xl font-bold text-base-content">
 						What to Expect from the Program
 					</h2>
 					<p class="max-w-2xl mx-auto text-lg text-base-content/80">
@@ -2197,21 +2333,20 @@
 					</p>
 					<div class="w-24 h-1 mx-auto mt-4 bg-primary"></div>
 				</div>
-
 				<!-- Cards -->
 				<div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
 					<!-- Card 1 -->
 					<div
-						class="transition-shadow duration-300 bg-white shadow-md card ring-2 ring-teal-600 hover:shadow-xl"
+						class="transition-shadow duration-300 shadow-md bg-base-300 card ring-2 ring-secondary hover:shadow-xl"
 					>
 						<div class="items-center text-center card-body">
 							<div class="flex justify-center">
 								<span
-									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold text-white bg-teal-600 rounded-full"
+									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold rounded-full text-secondary-content bg-secondary"
 									>1</span
 								>
 							</div>
-							<h3 class="mb-2 text-xl card-title">
+							<h3 class="mb-2 text-xl card-title text-base-content">
 								Master Dashboard Creation & Workflow Automation
 							</h3>
 							<p class="text-base-content/70">
@@ -2224,16 +2359,16 @@
 
 					<!-- Card 2 -->
 					<div
-						class="transition-shadow duration-300 bg-white shadow-md card ring-2 ring-sky-600 hover:shadow-xl"
+						class="transition-shadow duration-300 shadow-md bg-base-300 card ring-2 ring-accent hover:shadow-xl"
 					>
 						<div class="items-center text-center card-body">
 							<div class="flex justify-center">
 								<span
-									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold text-white rounded-full bg-sky-600"
+									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold rounded-full text-accent-content bg-accent"
 									>2</span
 								>
 							</div>
-							<h3 class="mb-2 text-xl card-title">
+							<h3 class="mb-2 text-xl card-title text-base-content">
 								Advanced Data Analysis Made Simple
 							</h3>
 							<p class="text-base-content/70">
@@ -2246,16 +2381,16 @@
 
 					<!-- Card 3 -->
 					<div
-						class="transition-shadow duration-300 bg-white shadow-md card ring-2 ring-indigo-600 hover:shadow-xl"
+						class="transition-shadow duration-300 shadow-md bg-base-300 card ring-2 ring-secondary hover:shadow-xl"
 					>
 						<div class="items-center text-center card-body">
 							<div class="flex justify-center">
 								<span
-									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold text-white bg-indigo-600 rounded-full"
+									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold rounded-full text-secondary-content bg-secondary"
 									>3</span
 								>
 							</div>
-							<h3 class="mb-2 text-xl card-title">
+							<h3 class="mb-2 text-xl card-title text-base-content">
 								Impactful Data Storytelling
 							</h3>
 							<p class="text-base-content/70">
@@ -2268,16 +2403,18 @@
 
 					<!-- Card 4 -->
 					<div
-						class="transition-shadow duration-300 bg-white shadow-md card ring-2 ring-lime-600 hover:shadow-xl"
+						class="transition-shadow duration-300 shadow-md bg-base-300 card ring-2 ring-info hover:shadow-xl"
 					>
 						<div class="items-center text-center card-body">
 							<div class="flex justify-center">
 								<span
-									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold text-white rounded-full bg-lime-600"
+									class="flex items-center justify-center w-12 h-12 mb-4 text-2xl font-bold rounded-full text-accent-content bg-info"
 									>4</span
 								>
 							</div>
-							<h3 class="mb-2 text-xl card-title">Seamless Data Integration</h3>
+							<h3 class="mb-2 text-xl card-title text-base-content">
+								Seamless Data Integration
+							</h3>
 							<p class="text-base-content/70">
 								Learn to efficiently merge and analyze data from multiple
 								sources including MS Excel, SQL databases, and more, creating
@@ -2288,24 +2425,45 @@
 				</div>
 
 				<!-- CTA Section -->
-				<div class="mt-16 text-center">
+				<!-- Bottom CTA -->
+				<div
+					class="flex flex-col justify-center gap-3 mt-16 sm:flex-row md:gap-4"
+				>
 					<a
 						href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
-						class="gap-2 btn btn-primary btn-lg"
+						class="relative w-full overflow-hidden transition-transform btn text-primary-content md:max-w-96 btn-lg group hover:scale-110"
+						style="
+							background: linear-gradient(
+								-45deg,
+								#3b82f6,
+								#eab308,
+								#3b82f6,
+								#eab308
+							);
+							background-size: 400% 400%;
+							animation: gradient 15s ease infinite;
+						"
 					>
-						Start You Journey
+						<div class="flex flex-col items-center">
+							<div class="flex items-center gap-2">
+								<span class="text-xl font-bold">₹99</span>
+								<span class="text-sm line-through opacity-75">₹3999</span>
+							</div>
+							<span class="text-xs">Limited time offer</span>
+						</div>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="w-5 h-5"
-							viewBox="0 0 24 24"
+							class="absolute w-5 h-5 ml-2 md:w-6 md:h-6 right-4"
 							fill="none"
+							viewBox="0 0 24 24"
 							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
 						>
-							<path d="M5 12h14" />
-							<path d="m12 5 7 7-7 7" />
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M13 7l5 5m0 0l-5 5m5-5H6"
+							/>
 						</svg>
 					</a>
 				</div>
@@ -2313,19 +2471,19 @@
 		</section>
 
 		<!-- FAQs -->
-		<section class="py-16 bg-white">
+		<section class="py-16 bg-base-100">
 			<div class="container px-4 mx-auto">
-				<h2 class="mb-8 text-3xl font-bold text-center">
+				<h2 class="mb-8 text-3xl font-bold text-center text-base-content">
 					Frequently Asked Questions
 				</h2>
 				<div class="space-y-4">
 					<!-- FAQ Item 1 -->
-					<div class="rounded-lg collapse collapse-arrow bg-base-100">
+					<div class="rounded-lg collapse collapse-arrow bg-base-200">
 						<input type="radio" name="my-accordion-1" />
-						<div class="text-xl font-medium collapse-title">
+						<div class="text-xl font-medium collapse-title text-base-content">
 							What services do you offer?
 						</div>
-						<div class="collapse-content">
+						<div class="collapse-content text-base-content/70">
 							<p>
 								We offer a comprehensive range of digital services including web
 								development, mobile app development, UI/UX design, and digital
@@ -2334,12 +2492,12 @@
 						</div>
 					</div>
 					<!-- FAQ Item 2 -->
-					<div class="rounded-lg collapse collapse-arrow bg-base-100">
+					<div class="rounded-lg collapse collapse-arrow bg-base-200">
 						<input type="radio" name="my-accordion-1" />
-						<div class="text-xl font-medium collapse-title">
+						<div class="text-xl font-medium collapse-title text-base-content">
 							How much do your services cost?
 						</div>
-						<div class="collapse-content">
+						<div class="collapse-content text-base-content/70">
 							<p>
 								Our pricing varies based on project requirements and scope. We
 								offer customized solutions to fit different budgets. Contact us
@@ -2348,12 +2506,12 @@
 						</div>
 					</div>
 					<!-- FAQ Item 3 -->
-					<div class="rounded-lg collapse collapse-arrow bg-base-100">
+					<div class="rounded-lg collapse collapse-arrow bg-base-200">
 						<input type="radio" name="my-accordion-1" />
-						<div class="text-xl font-medium collapse-title">
+						<div class="text-xl font-medium collapse-title text-base-content">
 							What is your typical project timeline?
 						</div>
-						<div class="collapse-content">
+						<div class="collapse-content text-base-content/70">
 							<p>
 								Project timelines vary depending on complexity and scope. A
 								typical website project takes 4-8 weeks, while larger
@@ -2363,12 +2521,12 @@
 						</div>
 					</div>
 					<!-- FAQ Item 4 -->
-					<div class="rounded-lg collapse collapse-arrow bg-base-100">
+					<div class="rounded-lg collapse collapse-arrow bg-base-200">
 						<input type="radio" name="my-accordion-1" />
-						<div class="text-xl font-medium collapse-title">
+						<div class="text-xl font-medium collapse-title text-base-content">
 							Do you offer support after project completion?
 						</div>
-						<div class="collapse-content">
+						<div class="collapse-content text-base-content/70">
 							<p>
 								Yes, we provide ongoing support and maintenance services. We
 								offer various support packages to ensure your digital solution
@@ -2381,7 +2539,7 @@
 		</section>
 
 		<!-- Sample Certificate -->
-		<section class="relative min-h-screen py-20 overflow-hidden bg-neutral-50">
+		<section class="relative min-h-screen py-20 overflow-hidden bg-base-200">
 			<!-- Decorative Background Elements -->
 			<div class="absolute inset-0 overflow-hidden opacity-10">
 				<div
@@ -2394,7 +2552,7 @@
 
 			<div class="container relative px-4 mx-auto">
 				<!-- Content Container -->
-				<div class="max-w-6xl mx-auto">
+				<div class="max-w-5xl mx-auto">
 					<!-- Text Content -->
 					<div class="max-w-3xl mx-auto mb-12 text-center">
 						<h2
@@ -2418,7 +2576,7 @@
 					<div class="relative">
 						<!-- Certificate Card -->
 						<div
-							class="transition-all duration-300 shadow-2xl card bg-base-100 group hover:shadow-primary/20"
+							class="transition-all duration-300 shadow-2xl card bg-base-300 group hover:shadow-primary/20"
 						>
 							<!-- Decorative Corner Elements -->
 							<div
@@ -2440,7 +2598,7 @@
 
 						<!-- Floating Badge -->
 						<div
-							class="absolute w-24 p-1 rounded shadow-xl -top-12 -right-6 md:right-8 bg-base-100 md:w-28 animate-bounce"
+							class="absolute w-24 p-1 rounded shadow-xl -top-12 -right-6 md:right-8 bg-neutral-200 md:w-28 animate-bounce"
 						>
 							<img
 								src="microsoft.webp"
@@ -2450,82 +2608,58 @@
 						</div>
 					</div>
 
-					<!-- Additional Info -->
-					<!-- <div class="flex justify-center mt-8">
-						<div class="shadow stats bg-base-100">
-							<div class="stat">
-								<div class="stat-figure text-primary">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										class="inline-block w-8 h-8 stroke-current"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-										></path>
-									</svg>
-								</div>
-								<div class="stat-title">Trusted By</div>
-								<div class="stat-value text-primary">4.5K+</div>
-								<div class="stat-desc">Students Worldwide</div>
-							</div>
-
-							<div class="stat">
-								<div class="stat-figure text-secondary">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										class="inline-block w-8 h-8 stroke-current"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M13 10V3L4 14h7v7l9-11h-7z"
-										></path>
-									</svg>
-								</div>
-								<div class="stat-title">Industry</div>
-								<div class="stat-value text-secondary">100%</div>
-								<div class="stat-desc">Recognition Rate</div>
-							</div>
-						</div>
-					</div> -->
-
 					<!-- CTA Section -->
 					<div class="mt-16 text-center ring ring-primary">
-						<div class="w-full mx-auto shadow-xl card bg-base-100">
+						<div class="w-full mx-auto shadow-xl card bg-base-300">
 							<div class="card-body">
-								<h3 class="mb-4 text-2xl font-bold">
+								<h3 class="mb-4 text-2xl font-bold text-base-content">
 									Ready to Start Your Journey?
 								</h3>
-								<p class="mb-6">
+								<p class="mb-6 text-base-content">
 									Join thousands of students who have already earned their
 									certifications in Microsoft Power Bi.
 								</p>
-								<div class="flex flex-col justify-center gap-4 sm:flex-row">
+								<!-- Bottom CTA -->
+								<div
+									class="flex flex-col justify-center gap-3 sm:flex-row md:gap-4"
+								>
 									<a
 										href="https://pages.razorpay.com/pl_Pcbfz9TDCXJhNU/view"
-										class="gap-2 btn btn-primary btn-lg"
+										class="relative w-full overflow-hidden transition-transform btn text-primary-content md:max-w-96 btn-lg group hover:scale-110"
+										style="
+											background: linear-gradient(
+												-45deg,
+												#3b82f6,
+												#eab308,
+												#3b82f6,
+												#eab308
+											);
+											background-size: 400% 400%;
+											animation: gradient 15s ease infinite;
+										"
 									>
-										Enroll Now
+										<div class="flex flex-col items-center">
+											<div class="flex items-center gap-2">
+												<span class="text-xl font-bold">₹99</span>
+												<span class="text-sm line-through opacity-75"
+													>₹3999</span
+												>
+											</div>
+											<span class="text-xs">Limited time offer</span>
+										</div>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											class="w-5 h-5"
-											viewBox="0 0 24 24"
+											class="absolute w-5 h-5 ml-2 md:w-6 md:h-6 right-4"
 											fill="none"
+											viewBox="0 0 24 24"
 											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
 										>
-											<path d="M5 12h14" />
-											<path d="m12 5 7 7-7 7" />
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M13 7l5 5m0 0l-5 5m5-5H6"
+											/>
 										</svg>
 									</a>
 								</div>
